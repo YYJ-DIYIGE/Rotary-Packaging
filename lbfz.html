@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FullSwiper</title>
+  <link rel="stylesheet" href="./css/lubo.css">
+ </head>
+<body>
+  <div class="swiper-wrapper" id="swiper-wrapper_1">
+    <div class="swiper-list" id="swiper-list_1">
+      <div class="swiper-item" style="background-color: #82A6F5;">1</div>
+      <div class="swiper-item" style="background-color: #EAF048;">2</div>
+      <div class="swiper-item" style="background-color: #9FF048;">3</div>
+      <div class="swiper-item" style="background-color: #2A5200;">4</div>
+      <div class="swiper-item" style="background-color: #F6D6FF;">5</div>
+    </div>
+    <a class="swiper-arrow swiper-arrow-left" id="swiper-prev_1">&lt;</a>
+    <a class="swiper-arrow swiper-arrow-right" id="swiper-next_1">&gt;</a>
+  </div>
+   <div class="swiper-wrapper" id="swiper-wrapper_2">
+    <div class="swiper-list" id="swiper-list_2">
+      <div class="swiper-item" style="background-color: #82A6F5;">1</div>
+      <div class="swiper-item" style="background-color: #EAF048;">2</div>
+      <div class="swiper-item" style="background-color: #9FF048;">3</div>
+      <div class="swiper-item" style="background-color: #2A5200;">4</div>
+      <div class="swiper-item" style="background-color: #F6D6FF;">5</div>
+    </div>
+    <a class="swiper-arrow swiper-arrow-left" id="swiper-prev_2">&lt;</a>
+    <a class="swiper-arrow swiper-arrow-right" id="swiper-next_2">&gt;</a>
+  </div>
+ <script src="js/Rotary.js"></script>
+   <script type="text/javascript">
+
+  const PAGE = {
+    date:{
+      swiperlist_1 : null,
+      swiperlist_2 : null,
+    },
+    init:function(){
+      this.initCount();
+    },
+    initCount:function(){
+      PAGE.date.swiperlist_1 = new Swiper({
+        id: 'swiper-list_1',
+        leftbtn: 'swiper-prev_1',
+        rightbtn: 'swiper-next_1',
+      })
+      PAGE.date.swiperlist_2 = new Swiper({
+        id: 'swiper-list_2',
+        leftbtn: 'swiper-prev_2',
+        rightbtn: 'swiper-next_2',
+      })
+    }
+  }
+  PAGE.init();
+  </script>
+</body>
+</html>
